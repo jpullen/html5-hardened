@@ -4,11 +4,9 @@
     <title>Timer Storm</title>
 
     <script>
-
         var tickCount = 0;
 
         // Credits: Based on clock example at W3Schools.com
-
         function startTime()
         {
             var today=new Date();
@@ -17,10 +15,10 @@
             var s = today.getSeconds();
             m = checkTime(m);
             s = checkTime(s);
-            document.getElementById("txt").innerHTML=h+":"+m+":"+s;
+            document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
             t = setTimeout(function(){ startTime(); }, 500);
 
-            document.getElementById("ticks").innerHTML= tickCount++;
+            document.getElementById("ticks").innerHTML = tickCount++;
         }
 
         function checkTime(i)
@@ -34,11 +32,11 @@
     </script>
 </head>
 <body>
-    <p>Credit: Based on clock example at W3Schools.com
-    <a target="_blank"
+    <h3>Credit: Based on clock example at W3Schools.com</h3>
+    <p><a target="_blank"
        href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timeing_clock">http://www.w3schools.com/js/tryit.asp?filename=tryjs_timeing_clock</a></p>
     <p><button onclick="startTime()">Start Clock</button></p>
-    <p>Time: <div id="txt"></div></p>
-    <p>Tick count: <div id="ticks"></div></p>
+    <p>Time: <span id="txt"></span></p>
+    <p>Tick count: <span id="ticks"></span></p>
 </body>
 </html>

@@ -200,7 +200,7 @@ puremvc.define
                         case 'Reverse' :
 					        this.dispatchTextChangedEvent();
                             break;
-                        case 'Divide Zero' :
+                        case 'Throw Exception' :
                             throw ({'hehe':'haha'});
                             break
                         case 'Remove IFrame1' :
