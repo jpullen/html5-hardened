@@ -429,16 +429,22 @@
         <script>
             function createTimerStormFrame()
             {
-
+                var f = document.createElement("iframe");
+                f.name = "timer-storm-frame";
+                f.id = "timer-storm-frame";
+                f.sandbox = "allow-scripts allow-forms allow-same-origin";
+                f.frameBorder = "0";
+                f.border = "0";
+                f.cellSpacing = "0";
+                f.style = "border-style: none;width: 100%; height: 400px;";
+                f.src = "../examples/timer-storm/timer-storm.html";
+                var d = document.getElementById("timer-storm-div");
+                d.appendChild(f);
             }
         </script>
-        <iframe name="timer-storm-frame" id="timer-storm-frame"
-                sandbox="allow-scripts allow-forms allow-same-origin"
-                seamless="seamless"
-                frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 300px;"
-                src="../examples/timer-storm/timer-storm.html">
-        </iframe>
-        <p><button onclick="createTimerStormFrame()">Create Timer Storm Frame</button></p>
+        <div id="timer-storm-div">
+        </div>
+        <p><button onclick="createTimerStormFrame()">Create Frame</button></p>
         <p><button onclick="removeFrame('timer-storm-frame')">Kill Frame</button> </p>
     </section>
 
